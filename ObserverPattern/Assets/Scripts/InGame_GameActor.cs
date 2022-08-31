@@ -50,9 +50,9 @@ public class InGame_GameActor : MonoBehaviour
     {
         animator.SetBool("isAttack", false);
     }
-    public void Move(Vector2 axisRaw, CommandsType commandsType)
+    public void Move(Vector2 axisRaw, KeyType keyType)
     {
-        isPressMoveCommand[(int)commandsType] = true;
+        isPressMoveCommand[(int)keyType] = true;
 
         float inputX = axisRaw.x;
         float inputY = axisRaw.y;
@@ -73,9 +73,9 @@ public class InGame_GameActor : MonoBehaviour
         }
     }
 
-    public void Input_IsPressMoveCommand(CommandsType commandsType)
+    public void Input_IsPressMoveCommand(KeyType keyType)
     {
-        isPressMoveCommand[(int)commandsType] = false;
+        isPressMoveCommand[(int)keyType] = false;
     }
     public void Move_End()
     {

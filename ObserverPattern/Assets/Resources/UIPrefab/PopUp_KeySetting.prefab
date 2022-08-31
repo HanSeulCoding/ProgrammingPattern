@@ -528,6 +528,7 @@ GameObject:
   - component: {fileID: 6113790093736229361}
   - component: {fileID: 8413900448989075977}
   - component: {fileID: 4425843331490044898}
+  - component: {fileID: 298744427950140108}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -636,7 +637,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6113790093736229361}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &4425843331490044898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +670,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &298744427950140108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139400468398736438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 4171087945939437333}
 --- !u!1 &1291575681615471717
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1044,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1117,6 +1143,7 @@ GameObject:
   - component: {fileID: 5484104169647656327}
   - component: {fileID: 1792370744015405278}
   - component: {fileID: 7585982211084632186}
+  - component: {fileID: 8500891160618074879}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1225,7 +1252,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5484104169647656327}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7585982211084632186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1246,6 +1285,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &8500891160618074879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1849623941211262153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8434705605477700701}
 --- !u!1 &2043681233030534464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1850,6 +1902,7 @@ GameObject:
   - component: {fileID: 7158267563971723640}
   - component: {fileID: 3840164205782724894}
   - component: {fileID: 1439324367015272056}
+  - component: {fileID: 822638184718589858}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1958,7 +2011,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7158267563971723640}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1439324367015272056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,6 +2044,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &822638184718589858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646846913414147171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2078074063554819874}
 --- !u!1 &3720689724545946883
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,7 +2181,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2202,6 +2280,7 @@ GameObject:
   - component: {fileID: 885266052695517463}
   - component: {fileID: 4198541797275355321}
   - component: {fileID: 6156874849185971942}
+  - component: {fileID: 5640251665745354368}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -2310,7 +2389,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 885266052695517463}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6156874849185971942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2331,6 +2422,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &5640251665745354368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4389524262080394315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 6333529643382203366}
 --- !u!1 &4702930741693494192
 GameObject:
   m_ObjectHideFlags: 0
@@ -2455,7 +2559,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2688,7 +2792,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3111,6 +3215,7 @@ GameObject:
   - component: {fileID: 5728897524157526166}
   - component: {fileID: 3486393665462069127}
   - component: {fileID: 8052935306187950608}
+  - component: {fileID: 5120431884584648271}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -3219,7 +3324,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5728897524157526166}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8052935306187950608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,6 +3357,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &5120431884584648271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336945006278780063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 31961371436967274}
 --- !u!1 &5555737593883475871
 GameObject:
   m_ObjectHideFlags: 0
@@ -3737,7 +3867,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4511,6 +4641,7 @@ GameObject:
   - component: {fileID: 8284314390652003910}
   - component: {fileID: 7258105743526978761}
   - component: {fileID: 3854791500562670221}
+  - component: {fileID: 6000443616690027354}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -4619,7 +4750,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8284314390652003910}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 298744427950140108}
+        m_TargetAssemblyTypeName: UI_KeySetting_KeyClickBtn, Assembly-CSharp
+        m_MethodName: KeyClickBtn
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3854791500562670221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4640,6 +4783,19 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &6000443616690027354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7754481626336159445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02528d9167c5d124a962d71b7f9c3f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 3166840262740520141}
 --- !u!1 &7970217974258731184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,6 +4892,13 @@ MonoBehaviour:
   - {fileID: 8575851522227729849}
   - {fileID: 8188957824750825480}
   - {fileID: 8274805324484799143}
+  keyClickBtn:
+  - {fileID: 822638184718589858}
+  - {fileID: 8500891160618074879}
+  - {fileID: 6000443616690027354}
+  - {fileID: 5120431884584648271}
+  - {fileID: 298744427950140108}
+  - {fileID: 5640251665745354368}
 --- !u!1 &8351620682294451997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5004,7 +5167,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8566847737923556225}
         m_TargetAssemblyTypeName: PopUp_UIKeySetting, Assembly-CSharp
-        m_MethodName: ClickInputKeyBtn
+        m_MethodName: ClickInputFieldBtn
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -24,12 +24,22 @@ public class InGame_Player : InGame_GameActor
         inputHandler.handleInput(this, CommandsType.DOWN, KeyPressType.PRESS);
         inputHandler.handleInput(this, CommandsType.RIGHT, KeyPressType.PRESS);
         inputHandler.handleInput(this, CommandsType.LEFT, KeyPressType.PRESS);
+        inputHandler.handleInput(this, CommandsType.ENTER, KeyPressType.PRESS);
+        inputHandler.handleInput(this, CommandsType.SPACE, KeyPressType.PRESS);
+
+        inputHandler.handleInput(this, CommandsType.UP, KeyPressType.DOWN);
+        inputHandler.handleInput(this, CommandsType.DOWN, KeyPressType.DOWN);
+        inputHandler.handleInput(this, CommandsType.RIGHT, KeyPressType.DOWN);
+        inputHandler.handleInput(this, CommandsType.LEFT, KeyPressType.DOWN);
         inputHandler.handleInput(this, CommandsType.ENTER, KeyPressType.DOWN);
         inputHandler.handleInput(this, CommandsType.SPACE, KeyPressType.DOWN);
+
         inputHandler.handleInput(this, CommandsType.UP, KeyPressType.UP);
         inputHandler.handleInput(this, CommandsType.DOWN, KeyPressType.UP);
         inputHandler.handleInput(this, CommandsType.RIGHT, KeyPressType.UP);
         inputHandler.handleInput(this, CommandsType.LEFT, KeyPressType.UP);
+        inputHandler.handleInput(this, CommandsType.SPACE, KeyPressType.UP);
+        inputHandler.handleInput(this, CommandsType.ENTER, KeyPressType.UP);
     }
 
 }

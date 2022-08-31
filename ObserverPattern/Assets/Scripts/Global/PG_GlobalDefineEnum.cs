@@ -15,6 +15,16 @@ public enum KeyPressType
     UP,
     COUNT
 }
+public enum KeyType
+{
+    FORWARD,
+    BACK,
+    RIGHT,
+    LEFT,
+    SKILL,
+    ATTACK,
+    COUNT
+}
 public enum AnimEndState
 {
     ATTACK,
