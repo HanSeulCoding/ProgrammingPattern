@@ -8,19 +8,19 @@ public abstract class Command
 {
     public KeyCode keyCode;
     public KeyType keyType;
-    public abstract void Execute(InGame_GameActor gameActor);
-    public abstract void EndExecute(InGame_GameActor gameActor);
+    public abstract void Execute(PG_Player gameActor);
+    public abstract void EndExecute(PG_Player gameActor);
     public abstract string Print();
     public abstract KeyType GetKeyType();
 }
 
 class Command_Skill : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Skill();
     }
-    public override void EndExecute(InGame_GameActor gameActor) { }
+    public override void EndExecute(PG_Player gameActor) { }
    
     public override string Print()
     {
@@ -34,11 +34,11 @@ class Command_Skill : Command
 
 class Command_Attack : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Attack();
     }
-    public override void EndExecute(InGame_GameActor gameActor) { }
+    public override void EndExecute(PG_Player gameActor) { }
  
     public override string Print()
     {
@@ -52,7 +52,7 @@ class Command_Attack : Command
 
 class Command_Move_F : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Move(new Vector2(0,1),KeyType.FORWARD);
     }
@@ -62,7 +62,7 @@ class Command_Move_F : Command
         return "Forward";
     }
 
-    public override void EndExecute(InGame_GameActor gameActor)
+    public override void EndExecute(PG_Player gameActor)
     {
         gameActor.Input_IsPressMoveCommand(KeyType.FORWARD);
     }
@@ -74,7 +74,7 @@ class Command_Move_F : Command
 
 class Command_Move_B : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Move(new Vector2(0,-1), KeyType.BACK);
     }
@@ -82,7 +82,7 @@ class Command_Move_B : Command
     {
         return "Back";
     }
-    public override void EndExecute(InGame_GameActor gameActor)
+    public override void EndExecute(PG_Player gameActor)
     {
         gameActor.Input_IsPressMoveCommand(KeyType.BACK);
     }
@@ -94,7 +94,7 @@ class Command_Move_B : Command
 
 class Command_Move_R : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Move(new Vector2(1,0), KeyType.RIGHT);
     }
@@ -102,7 +102,7 @@ class Command_Move_R : Command
     {
         return "Right";
     }
-    public override void EndExecute(InGame_GameActor gameActor)
+    public override void EndExecute(PG_Player gameActor)
     {
         gameActor.Input_IsPressMoveCommand(KeyType.RIGHT);
     }
@@ -114,7 +114,7 @@ class Command_Move_R : Command
 
 class Command_Move_L : Command
 {
-    public override void Execute(InGame_GameActor gameActor)
+    public override void Execute(PG_Player gameActor)
     {
         gameActor.Move(new Vector2(-1,0), KeyType.LEFT);
     }
@@ -122,7 +122,7 @@ class Command_Move_L : Command
     {
         return "Left";
     }
-    public override void EndExecute(InGame_GameActor gameActor)
+    public override void EndExecute(PG_Player gameActor)
     {
         gameActor.Input_IsPressMoveCommand(KeyType.LEFT);
     }
@@ -164,7 +164,7 @@ public class InputHandler : MonoBehaviour
         }
         return null;
     }
-    public void handleInput(InGame_GameActor actor, CommandsType commansType, KeyPressType keyPressType)
+    public void handleInput(PG_Player player, CommandsType commansType, KeyPressType keyPressType)
     {
         bool isEnabledKey = false;
         bool isUpEnabledKey = false;
@@ -190,28 +190,15 @@ public class InputHandler : MonoBehaviour
        
         if(isEnabledKey)
         {
-            commands[(int)commansType].Execute(actor);
+            commands[(int)commansType].Execute(player);
         }
         if(isUpEnabledKey)
         {
-            commands[(int)commansType].EndExecute(actor);
+            commands[(int)commansType].EndExecute(player);
         }
     }
     public void SetCommand(CommandsType commandsType, KeyCode keyCode)
     {
-        //commands[(int)CommandsType.UP] = new Command_Move_F();
-        //commands[(int)CommandsType.DOWN] = new Command_Move_B();
-        //commands[(int)CommandsType.RIGHT] = new Command_Move_R();
-        //commands[(int)CommandsType.LEFT] = new Command_Move_L();
-        //commands[(int)CommandsType.SPACE] = new Command_Skill();
-        //commands[(int)CommandsType.ENTER] = new Command_Attack();
-
-        //commands[(int)CommandsType.UP].keyCode = KeyCode.W;
-        //commands[(int)CommandsType.DOWN].keyCode = KeyCode.S;
-        //commands[(int)CommandsType.RIGHT].keyCode = KeyCode.D;
-        //commands[(int)CommandsType.LEFT].keyCode = KeyCode.A;
-        //commands[(int)CommandsType.SPACE].keyCode = KeyCode.Space;
-        //commands[(int)CommandsType.ENTER].keyCode = KeyCode.KeypadEnter;
         Command command = null;
         switch (commandsType)
         {
@@ -240,16 +227,6 @@ public class InputHandler : MonoBehaviour
             commands[(int)commandsType] = command;
             commands[(int)commandsType].keyCode = keyCode;
         }
-    }
-
-    public void KeyCodeChange(CommandsType commandsType, KeyCode changeKeyCode)
-    {
-        commands[(int)commandsType].keyCode = changeKeyCode;
-    }
-    
-    public void CommandChange(CommandsType aCommand, CommandsType bCommand)
-    {
-
     }
 }
 

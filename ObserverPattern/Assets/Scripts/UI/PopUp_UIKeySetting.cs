@@ -29,7 +29,7 @@ public class PopUp_UIKeySetting : MonoBehaviour
         InitKeyInputFields();
         InitKeyButton();
     }
-    void InitKeyInputFields()
+    void InitKeyInputFields() //초기 CommandType에 대한 KeyCode를 출력해준다. 
     {
         inputHandler = main.InputHandler;
         Command[] commands = inputHandler.commands;
@@ -39,7 +39,7 @@ public class PopUp_UIKeySetting : MonoBehaviour
         }
        
     }
-    void InitKeyButton()
+    void InitKeyButton() //초기 CommandType 에 대한 Command 정보를 출력해준다. 
     {
         inputHandler = main.InputHandler;
         Command[] commands = inputHandler.commands;
@@ -76,7 +76,6 @@ public class PopUp_UIKeySetting : MonoBehaviour
         {
             return;
         }
-
         //KeyCode Swap
         KeyCode k_temp = commands[(int)inputCommandsType].keyCode;
         commands[(int)inputCommandsType].keyCode = commands[(int)clickCommandsType].keyCode;
@@ -101,7 +100,7 @@ public class PopUp_UIKeySetting : MonoBehaviour
     private void OnGUI()
     {
         Event keyEvent = Event.current;
-        if (keyEvent.isKey)
+        if (keyEvent.isKey && keyEvent.keyCode != KeyCode.None)
         {
             ReallocateKeyCode(keyEvent.keyCode);
         }

@@ -8,7 +8,7 @@ public class PG_UIMain : MonoBehaviour
 {
     // Start is called before the first frame update
     private static PG_UIMain instance;
-
+    public KeyInput_Test keyInputTest; //다음에 무조건 지우자.
     public static PG_UIMain Instance
     {
         get
@@ -23,9 +23,9 @@ public class PG_UIMain : MonoBehaviour
     {
         instance = this;
     }
-    void Start()
+    public void Start()
     {
-        
+   
     }
 
     // Update is called once per frame
@@ -109,7 +109,14 @@ public class PG_UIMain : MonoBehaviour
         {
             panel_UIWorld = SpawnUIObject(uIPrefabContainer.pannel_World).GetComponent<Panel_UIWorld>();
         }
-
-
+    }
+    private void OnGUI() //보여주기식 Text를 위해 작성해놓은 OnGui 나중에 무조건 지워야한다. Delete 필수
+    {
+        Event keyEvent = Event.current;
+  
+        if (keyEvent.isKey && keyEvent.keyCode != KeyCode.None)
+        {
+            keyInputTest.ModifyText(keyEvent.keyCode.ToString());
+        }
     }
 }

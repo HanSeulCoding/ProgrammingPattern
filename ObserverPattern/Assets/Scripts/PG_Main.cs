@@ -17,9 +17,9 @@ public class PG_Main : MonoBehaviour
 
     // Start is called before the first frame update
     public PG_UIMain uiMain;
-    public InGame_Player player;
+    public PG_Player player;
     public PGInitialState initialState = PGInitialState.World_Offline;
-    bool isGamePause = false;
+    public bool isGamePause = false;
 
     private InputHandler _inputHandler;
     public InputHandler InputHandler
@@ -29,17 +29,19 @@ public class PG_Main : MonoBehaviour
  
     private Command command;
  
-    public InGame_ActorCamera ActorCamera;
+    public PG_ActorCamera ActorCamera;
     private void Awake()
     {
         instance = this;
-        ActorCamera = InGame_ActorCamera.Instance;
+        ActorCamera = PG_ActorCamera.Instance;
     }
     void Start()
     {
         _inputHandler = new InputHandler();
         KeySet();
         uiMain = PG_UIMain.Instance;
+
+        player.Start_Actor();
 
         if(initialState == PGInitialState.World_Offline)
         {
@@ -52,8 +54,7 @@ public class PG_Main : MonoBehaviour
     {
         if (!isGamePause)
         {
-            player.PlayerControl();
-            player.Move_End();
+            player.Update_Actor();
         }
     }
 
