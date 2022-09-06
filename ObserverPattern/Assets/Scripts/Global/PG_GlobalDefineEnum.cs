@@ -52,3 +52,8 @@ public enum PGInitialState
     World_Online
 }
 
+public enum AchivementType
+{
+    MonsterKill,
+    Count
+}

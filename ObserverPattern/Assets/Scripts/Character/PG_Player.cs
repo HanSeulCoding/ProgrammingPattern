@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PG_Player : PG_GameActor
 {
+    [SerializeField]
+    Transform cameraArm;
     Vector3 dir;
     float turnSmoothTime = 0.1f;
-
     protected bool[] isPressMoveCommand = new bool[4];
     // Start is called before the first frame update
     public override void Start_Actor()
@@ -14,6 +15,7 @@ public class PG_Player : PG_GameActor
         InitActor();
         PG_Global._animEndDelegate[(int)AnimEndState.ATTACK] += EndAttack;
         PG_Global._animEndDelegate[(int)AnimEndState.SKILL] += EndSkill;
+        cameraArm = PG_Main.Instance.ActorCamera.transform;
     }
     // Update is called once per frame
     public override void Update_Actor()
@@ -52,7 +54,11 @@ public class PG_Player : PG_GameActor
             isMoveEnd = true;
             animator.SetBool("isMove", true);
 
+            Vector3 lookForward = new Vector3(cameraArm.forward.x, 0, cameraArm.forward.z).normalized;
+            Vector3 lookRight = new Vector3(cameraArm.right.x, 0, cameraArm.right.z).normalized;
+            dir = lookRight * dir.x + lookForward * dir.z;
             dir = dir.normalized;
+
             float targetAngle = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 

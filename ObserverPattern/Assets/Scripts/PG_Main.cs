@@ -70,5 +70,9 @@ public class PG_Main : MonoBehaviour
     private void LateUpdate()
     {
         ActorCamera.LookTarget(player.transform);
+        if(Input.GetMouseButton(1))
+        {
+            ActorCamera.LookAround();
+        }    
     }
 }
