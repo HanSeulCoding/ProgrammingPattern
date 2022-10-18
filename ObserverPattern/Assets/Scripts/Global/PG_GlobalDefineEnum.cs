@@ -57,3 +57,12 @@ public enum AchivementType
     MonsterKill,
     Count
 }
+
+public enum ActorState
+{
+    Idle,
+    Move,
+    Attack,
+    Skill,
+    Death
+}

@@ -5,9 +5,9 @@ using UnityEngine;
 public abstract class PG_GameActor : MonoBehaviour
 {
     
-    public float speed;
+    public float MoveSpeed;
     public float turnSmoothVelocity;
-    protected Animator animator;
+    protected Animator anim;
     protected Rigidbody rigidBody = null;
     protected BoxCollider collider = null;
     protected PG_Main main;
@@ -16,7 +16,7 @@ public abstract class PG_GameActor : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody>();
         collider = GetComponent<BoxCollider>();
-        animator = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         main = PG_Main.Instance;
     }
     public virtual void Skill()
@@ -34,6 +34,10 @@ public abstract class PG_GameActor : MonoBehaviour
     {
     }
     public virtual void Move(Vector2 axisRaw, KeyType keyType)
+    {
+
+    }
+    public virtual void Move()
     {
 
     }

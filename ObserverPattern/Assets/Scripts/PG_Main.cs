@@ -33,7 +33,6 @@ public class PG_Main : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        ActorCamera = PG_ActorCamera.Instance;
     }
     void Start()
     {
@@ -64,7 +63,7 @@ public class PG_Main : MonoBehaviour
         _inputHandler.SetCommand(CommandsType.DOWN, KeyCode.S);
         _inputHandler.SetCommand(CommandsType.RIGHT, KeyCode.D);
         _inputHandler.SetCommand(CommandsType.LEFT, KeyCode.A);
-        _inputHandler.SetCommand(CommandsType.ENTER, KeyCode.Return);
+        _inputHandler.SetCommand(CommandsType.ENTER, KeyCode.Mouse0);
         _inputHandler.SetCommand(CommandsType.SPACE, KeyCode.Space);
     }
     private void LateUpdate()

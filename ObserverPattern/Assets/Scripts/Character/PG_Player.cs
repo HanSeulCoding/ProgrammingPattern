@@ -25,12 +25,12 @@ public class PG_Player : PG_GameActor
     }
     public override void Attack()
     {
-        animator.SetBool("isAttack", true);
-        StartCoroutine(PG_ActorUtility.CheckAnimationState(animator, "Ekard_Attack_01_h", LayerType.UPPER, AnimEndState.ATTACK));
+        anim.SetBool("isAttack", true);
+        StartCoroutine(PG_ActorUtility.CheckAnimationState(anim, "Ekard_Attack_01_h", LayerType.UPPER, AnimEndState.ATTACK));
     }
     public override void EndAttack()
     {
-        animator.SetBool("isAttack", false);
+        anim.SetBool("isAttack", false);
     }
     public override void Skill()
     {
@@ -52,7 +52,7 @@ public class PG_Player : PG_GameActor
         if (dir.magnitude > 0.1f)
         {
             isMoveEnd = true;
-            animator.SetBool("isMove", true);
+            anim.SetBool("isMove", true);
 
             Vector3 lookForward = new Vector3(cameraArm.forward.x, 0, cameraArm.forward.z).normalized;
             Vector3 lookRight = new Vector3(cameraArm.right.x, 0, cameraArm.right.z).normalized;
@@ -63,7 +63,7 @@ public class PG_Player : PG_GameActor
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(0.0f, angle, 0.0f);
-            transform.position += dir * speed * Time.deltaTime;
+            transform.position += dir * MoveSpeed * Time.deltaTime;
         }
     }
     private void PlayerControl()
@@ -95,7 +95,7 @@ public class PG_Player : PG_GameActor
     {
         if (!isPressMoveCommand[0] && !isPressMoveCommand[1] && !isPressMoveCommand[2] && !isPressMoveCommand[3])
         {
-            animator.SetBool("isMove", false);
+            anim.SetBool("isMove", false);
         }
     }
     public void Input_IsPressMoveCommand(KeyType keyType)
